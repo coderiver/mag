@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -25,9 +26,46 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: eurostile; src: url("fonts/eurostile.eot"); src: url("fonts/eurostile.eot?#iefix") format("embedded-opentype"), url("fonts/eurostile.woff2") format("woff2"), url("fonts/eurostile.woff") format("woff"), url("fonts/eurostile.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: eurostile-bold; src: url("fonts/eurostile-bold.eot"); src: url("fonts/eurostile-bold.eot?#iefix") format("embedded-opentype"), url("fonts/eurostile-bold.woff2") format("woff2"), url("fonts/eurostile-bold.woff") format("woff"), url("fonts/eurostile-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-size: 14px; line-height: 1.4; font-family: "eurostile", Arial, sans-serif; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+.out { max-width: 1600px; margin: 0 auto; box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); }
+
+.l { max-width: 1030px; margin: 0 auto; padding: 0 15px; }
+
+a { text-decoration: none; }
+
+.header { position: fixed; top: 0; width: 100%; max-width: 1600px; margin: 0 auto; background: rgba(0, 0, 0, 0.75); z-index: 2; }
+
+.section { min-height: 652px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.section.is-home { background-image: url(../img/home-bg.jpg); background-color: #4B4E83; }
+.section.is-payment { background-image: url(../img/payment-bg.jpg); }
+.section.is-handover { background-image: url(../img/handover-bg.jpg); background-color: #469dd9; }
+.section__logo { display: block; float: left; margin-right: 47px; }
+
+.bl { padding-top: 210px; color: #444a40; font-size: 18px; line-height: 1.7; *zoom: 1; }
+.bl:after { content: " "; display: table; clear: both; }
+.bl.s-pad { padding-top: 80px; }
+.bl.txt-white { color: #FFF; }
+.bl.onright .bl__in { float: right; }
+.bl.txt-yellow { color: #f9e6bd; }
+.bl__about { overflow: hidden; }
+.bl__ttl { max-width: 260px; margin-bottom: 15px; text-transform: uppercase; font-size: 30px; color: #f4f5f6; line-height: 1.6; }
+.bl__ttl.txt-yellow { color: #8b763c; }
+.bl__ttl.txt-blue { color: #b9e0f5; }
+.bl__ttl.txt-black { color: #565656; }
+.bl__ttl.no-max-w { max-width: initial; }
+.bl__list { max-width: 320px; }
+.bl__list-span { display: inline-block; white-space: nowrap; }
+.bl__list.is-small { font-family: Calibri, Arial, sans-serif; font-size: 14px; }
+.bl__list.is-small li:before { top: 5px; }
+.bl__list li { position: relative; padding-left: 20px; }
+.bl__list li:before { content: "•"; position: absolute; top: 8px; left: 0; line-height: 1; }
+
+.book { position: relative; display: block; margin: 30px auto 0; width: 148px; height: 148px; background-color: rgba(0, 0, 0, 0.6); border-radius: 50%; text-align: center; font-size: 0; -moz-transition: 0.3s; -o-transition: 0.3s; -webkit-transition: 0.3s; transition: 0.3s; }
+.book:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.book:after { content: ""; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border: 1px solid #fff; border-radius: 50%; -moz-transition: 0.5s; -o-transition: 0.5s; -webkit-transition: 0.5s; transition: 0.5s; }
+.book:hover { background: rgba(0, 0, 0, 0.8); }
+.book:hover:after { top: 0; left: 0; right: 0; bottom: 0; opacity: 0; }
+.book__in { display: inline-block; text-transform: uppercase; color: #fff; font-size: 24px; vertical-align: middle; font-family: "eurostile-bold", Arial, sans-serif; }

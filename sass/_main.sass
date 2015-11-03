@@ -1,1 +1,116 @@
-// Normally mainpage styles
+//header
+.header
+	position: fixed
+	top: 0
+	width: 100%
+	max-width: 1600px
+	margin: 0 auto
+	background: rgba(0, 0, 0, 0.75)
+	z-index: 2
+
+.section
+	min-height: 652px
+	+cover
+	&.is-home
+		background-image: url(../img/home-bg.jpg)
+		background-color: #4B4E83
+	&.is-payment
+		background-image: url(../img/payment-bg.jpg)
+	&.is-handover
+		background-image: url(../img/handover-bg.jpg)
+		background-color: #469dd9
+	&__logo
+		display: block
+		float: left
+		margin-right: 47px
+
+.bl
+	padding-top: 210px
+	color: #444a40
+	font-size: 18px
+	line-height: 1.7
+	+clr
+	&.s-pad
+		padding-top: 80px
+	&.txt-white
+		color: #FFF
+	&.onright
+		.bl__in
+			float: right
+	&.txt-yellow
+		color: #f9e6bd
+	&__about
+		overflow: hidden
+	&__ttl
+		max-width: 260px
+		margin-bottom: 15px
+		text-transform: uppercase
+		font-size: 30px
+		color: #f4f5f6
+		line-height: 1.6
+		&.txt-yellow
+			color: #8b763c
+		&.txt-blue
+			color: #b9e0f5
+		&.txt-black
+			color: #565656
+		&.no-max-w
+			max-width: initial
+	&__list
+		max-width: 320px
+		&-span
+			display: inline-block
+			white-space: nowrap
+		&.is-small
+			font-family: Calibri, Arial, sans-serif
+			font-size: 14px
+			li
+				&:before
+					top: 5px
+		li
+			position: relative
+			padding-left: 20px
+			&:before
+				content: "•"
+				position: absolute
+				top: 8px
+				left: 0
+				line-height: 1
+
+
+// book
+.book
+	position: relative
+	display: block
+	margin: 30px auto 0
+	width: 148px
+	height: 148px
+	background-color: rgba(0, 0, 0, 0.6)
+	border-radius: 50%
+	+vertical
+	+tr(0.3s)
+	&:after
+		content: ""
+		position: absolute
+		top: -10px
+		left: -10px
+		right: -10px
+		bottom: -10px
+		border: 1px solid #fff
+		border-radius: 50%
+		+tr(0.5s)
+	&:hover
+		background: rgba(0, 0, 0, 0.8)
+		&:after
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+	&__in
+		display: inline-block
+		text-transform: uppercase
+		color: #fff
+		font-size: 24px
+		vertical-align: middle
+		+eur-b
