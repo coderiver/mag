@@ -16,13 +16,22 @@
 		background-color: #4B4E83
 	&.is-payment
 		background-image: url(../img/payment-bg.jpg)
+		.bookwrap
+			display: none
 	&.is-handover
 		background-image: url(../img/handover-bg.jpg)
 		background-color: #469dd9
+		.bookwrap
+			display: none
 	&__logo
 		display: block
 		float: left
 		margin-right: 47px
+	+r(900)
+		&.is-payment,
+		&.is-handover
+			.bookwrap
+				display: block
 
 .bl
 	padding-top: 210px
@@ -30,15 +39,13 @@
 	font-size: 18px
 	line-height: 1.7
 	+clr
-	&.s-pad
-		padding-top: 80px
 	&.txt-white
 		color: #FFF
-	&.onright
-		.bl__in
-			float: right
 	&.txt-yellow
 		color: #f9e6bd
+	&__in
+		&.onright
+			float: right
 	&__about
 		overflow: hidden
 	&__ttl
@@ -56,33 +63,42 @@
 			color: #565656
 		&.no-max-w
 			max-width: initial
-	&__list
+	&__small
+		display: block
 		max-width: 320px
-		&-span
-			display: inline-block
-			white-space: nowrap
-		&.is-small
-			font-family: Calibri, Arial, sans-serif
-			font-size: 14px
-			li
-				&:before
-					top: 5px
-		li
-			position: relative
+		margin-bottom: 20px
+		font-family: Calibri, Arial, sans-serif
+		font-size: 14px
+
+.list
+	max-width: 320px
+	&-span
+		display: inline-block
+		white-space: nowrap
+	&.is-small
+		font-family: Calibri, Arial, sans-serif
+		font-size: 14px
+		.bl__option span
+			padding-left: 5px
+	&__option
+		position: relative
+		> span
+			display: table-cell
 			padding-left: 20px
-			&:before
-				content: "•"
-				position: absolute
-				top: 8px
-				left: 0
-				line-height: 1
+		&:before
+			content: "•"
+			display: table-cell
+			vertical-align: top
 
 
-// book
+// book button
+.bookwrap
+	padding: 30px 0 50px
+	text-align: center
+
 .book
 	position: relative
-	display: block
-	margin: 30px auto 0
+	display: inline-block
 	width: 148px
 	height: 148px
 	background-color: rgba(0, 0, 0, 0.6)
@@ -114,3 +130,336 @@
 		font-size: 24px
 		vertical-align: middle
 		+eur-b
+
+
+// section with map
+.map
+	&__in
+		+clr
+	&.is-apartment
+		padding: 70px 0
+		background-color: #dadada
+		+g(#fff 0%, #d6d6d6 100%)
+	&__img
+		float: left
+		width: 65%
+		padding-right: 2%
+		cursor: pointer
+		img
+			max-width: 100%
+			display: block
+	.bl
+		float: right
+		width: 35%
+		padding: 100px 40px 30px 0
+	+r(2000)
+		.bl
+			padding-top: 5vw
+	+r(1100)
+		.bl
+			float: none
+			width: 100%
+			padding: 40px 15px
+		.bl__ttl
+			max-width: 320px
+			margin: 0 auto
+		.list
+			margin: 0 auto
+		&__img
+			float: none
+			width: 100%
+			img
+				width: 100%
+
+
+// districts
+.district
+	text-align: center
+	font-size: 0
+	&__bl
+		position: relative
+		display: inline-block
+		width: 25%
+		min-height: 400px
+		text-align: left
+		font-size: 14px
+		color: #FFF
+		vertical-align: top
+		overflow: hidden
+		cursor: pointer
+		+cover
+		&:hover
+			.district__info
+				top: 0
+				margin-top: 0
+		&.is-aero
+			background-image: url(../img/dist-aero.jpg)
+			background-color: #86858c
+			&:hover
+				.district__info
+					background: #86858c
+			.district__info
+				background-color: rgba(#86858c, 0.8)
+		&.is-golf
+			background-image: url(../img/dist-golf.jpg)
+			background-color: #496d21
+			&:hover
+				.district__info
+					background: #496d21
+			.district__info
+				background-color: rgba(#496d21, 0.8)
+		&.is-resident
+			background-image: url(../img/dist-resident.jpg)
+			background-color: #5087e2
+			&:hover
+				.district__info
+					background: #5087e2
+			.district__info
+				background-color: rgba(#5087e2, 0.8)
+		&.is-logistic
+			background-image: url(../img/dist-logistic.jpg)
+			background-color: #6f5c91
+			&:hover
+				.district__info
+					background: #6f5c91
+			.district__info
+				background-color: rgba(#6f5c91, 0.8)
+		&.is-business
+			background-image: url(../img/dist-business.jpg)
+			background-color: #bdd3f7
+			&:hover
+				.district__info
+					background-color: #bdd3f7
+			.district__info
+				background-color: rgba(#bdd3f7, 0.8)
+		&.is-commercial
+			background-image: url(../img/dist-commercial.jpg)
+			background-color: #07080d
+			&:hover
+				.district__info
+					background-color: #07080d
+			.district__info
+				background-color: rgba(#07080d, 0.8)
+		&.is-human
+			background-image: url(../img/dist-human.jpg)
+			background-color: #522923
+			&:hover
+				.district__info
+					background-color: #522923
+			.district__info
+				background-color: rgba(#522923, 0.8)
+		&.is-exhibition
+			background-image: url(../img/dist-pool.jpg)
+			background-color: #22376d
+			&:hover
+				.district__info
+					background-color: #22376d
+			.district__info
+				background-color: rgba(#22376d, 0.8)
+	&__info
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		height: 100%
+		margin-top: -100px
+		padding: 0 40px
+		+tr(0.4s)
+	&__ttl
+		max-height: 100px
+		padding: 41px 0
+		text-transform: uppercase
+		font-size: 18px
+		line-height: 1
+	.list
+		padding-top: 30px
+		text-align: left
+		font-family: Calibri, Arial, sans-serif
+		line-height: 1.75
+		border-top: 1px solid #fff
+	.list__option span
+		padding-left: 5px
+	+r(1300)
+		&__bl
+			width: 50%
+			text-align: center
+		.list
+			max-width: 400px
+			margin: 0 auto
+			padding-top: 15px
+	+r(700)
+		&__info
+			margin-top: -60px
+			padding: 0 20px
+		&__ttl
+			padding: 21px 0
+		&__bl
+			width: 100%
+
+// gallery
+.gallery
+	padding: 0 15px
+	height: 300px
+	text-align: center
+	background-image: url(../img/gallery.jpg)
+	+cover
+	+vertical
+	&:hover
+		.btn-gallery
+			border-color: #fff
+			&:before
+				opacity: 1
+
+.btn-gallery
+	position: relative
+	display: inline-block
+	width: 100%
+	max-width: 1000px
+	padding: 60px 0
+	text-transform: uppercase
+	font-size: 30px
+	color: #FFF
+	background: none
+	border: 1px solid transparent
+	vertical-align: middle
+	+tr(0.4s)
+	+eur
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: url(../img/btn-bg.jpg)
+		background-repeat: no-repeat
+		background-position: center center
+		opacity: 0
+		+tr(0.4s)
+	span
+		position: relative
+	+r(900)
+		padding: 30px 0
+	+r(700)
+		border-color: #fff
+
+
+// popup
+.popup
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	min-width: 320px
+	z-index: 100
+	background: rgba(#000, 0.8)
+	white-space: nowrap
+	+vertical
+	&.is-slider
+		&:before
+			display: none
+	&.is-light-bg
+		background: rgba(#dadada, 0.85)
+	&__in
+		display: inline-block
+		width: 100%
+		vertical-align: middle
+		white-space: normal
+	&__map
+		width: 100%
+
+// slider
+.slider
+	width: 100%
+	height: 100%
+	&__bl
+		width: 100%
+		height: 100%
+		+cover
+
+.cycle-prev,
+.cycle-next
+	position: absolute
+	bottom: 90px
+	font-size: 0
+	z-index: 150
+	cursor: pointer
+	+tr(opacity 0.4s)
+	&:hover
+		opacity: 0.9
+	+r(1100)
+		bottom: 10%
+
+.cycle-prev
+	left: 90px
+	+s(prev)
+	+r(1100)
+		left: 20px
+		+s(prev-s)
+
+.cycle-next
+	right: 90px
+	+s(next)
+	+r(1100)
+		right: 20px
+		+s(next-s)
+
+// close
+.close
+	position: absolute
+	top: 20px
+	right: 20px
+	width: 60px
+	height: 60px
+	z-index: 150
+	border: 1px solid #fff
+	border-radius: 5px
+	+vertical
+	+tr(opacity 0.4s)
+	&.is-big
+		width: 90px
+		height: 90px
+		top: 90px
+		right: 90px
+	&:hover
+		opacity: 0.6
+	.icon-close
+		vertical-align: middle
+	+r(1100)
+		&.is-big
+			top: 20px
+			right: 20px
+			width: 60px
+			height: 60px
+
+.apartment
+	text-align: center
+	font-size: 0
+	&__bl
+		display: inline-block
+		margin-bottom: 30px
+		padding: 0 15px
+		font-size: 18px
+		text-align: left
+		vertical-align: top
+		&:first-child
+			padding: 0 40px
+	&__img
+		height: 300px
+		margin-bottom: 40px
+		+vertical
+		img
+			display: inline-block
+			max-width: 100%
+			vertical-align: bottom
+	&__ttl
+		text-transform: uppercase
+		font-size: 30px
+		color: #211b1d
+	&__more
+		text-decoration: underline
+		color: #b20000
