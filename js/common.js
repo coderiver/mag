@@ -39,4 +39,15 @@ head.ready(function() {
 	// 	zoomWindowPosition: 14
 	// });
 
+	$('.js-show').click(function(e) {
+		e.preventDefault();
+		$(this).parent().find('.tel__num').css('max-width', 'initial');
+		$(this).hide();
+	});
+
+	$('.js-menu').click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass('is-active');
+	});
+
 });
