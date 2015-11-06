@@ -9,6 +9,7 @@
 	<meta name="theme-color" content="#fff">
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="stylesheet" media="all" href="css/magnifier.css" >
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
@@ -30,24 +31,31 @@
 						<li><a href="#" class="language__link">العربية</a></li>
 						<li><a href="#" class="language__link">فارسی</a></li>
 					</ul>
-					<div class="menu">
-						<a href="#" class="btn-menu js-menu"><span></span></a>
-						<div class="nav">
-							<div class="l">
-								<ul class="nav__list">
-									<li><a href="#">Main</a></li>
-									<li><a href="#">Location</a></li>
-									<li><a href="#">Advantages</a></li>
-									<li><a href="#">Gallery</a></li>
-									<li><a href="#">Apartment</a></li>
-									<li><a href="#">For investors</a></li>
-									<li><a href="#">Developer</a></li>
-									<li><a href="#">Contacts</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					<a href="#" class="btn-menu js-menu"><span></span></a>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav js-nav">
+		<div class="l">
+			<div class="nav__in">
+				<ul class="nav__list">
+					<li><a href="#">Main</a></li>
+					<li><a href="#">Location</a></li>
+					<li><a href="#">Advantages</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">Apartment</a></li>
+					<li><a href="#">For investors</a></li>
+					<li><a href="#">Developer</a></li>
+					<li><a href="#">Contacts</a></li>
+				</ul>
+				<a href="#" class="nav__link js-popup" data-popup="js-book-popup">Book my visit</a>
+				<ul class="language">
+					<li><a href="#" class="language__link">eng</a></li>
+					<li><a href="#" class="language__link">العربية</a></li>
+					<li><a href="#" class="language__link">فارسی</a></li>
+				</ul>
+				<span class="dots"></span>
 			</div>
 		</div>
 	</div>
@@ -65,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bookwrap">
+			<div class="bookwrap js-bookbtn">
 				<a href="#" class="book js-popup" data-popup="js-book-popup">
 					<div class="book__in">
 						<p>book</p>
@@ -103,7 +111,7 @@
 	</div>
 	<!-- end section payment -->
 	<!-- begin section handover  -->
-	<div class="section is-handover">
+	<div class="section is-handover js-bottom">
 		<div class="l">
 			<div class="bl txt-white">
 				<div class="bl__in">
@@ -269,46 +277,64 @@
 		<div class="apartment">
 			<div class="l">
 				<div class="apartment__in">
+					<div class="magnifier-preview" id="preview"></div>
 					<div class="apartment__bl">
-						<div class="apartment__img">
-							<img class="js-zoom" src="img/studio.png" alt="" data-zoom-image="img/studio.jpg" />
+						<div class="apartment__img js-popup" data-popup="js-studio-room">
+							<div class="apartment__zoom">
+								<div class="img">
+									<img src="img/studio.png" class="js-zoom" data-large-img-url="img/studio.jpg">
+								</div>
+							</div>
 						</div>
 						<div class="apartment__info">
 							<p class="apartment__ttl">STUDIO</p>
 							<p class="apartment__size">471 SQ FT</p>
-							<a href="#" class="apartment__more">details</a>
+							<a href="#" class="apartment__more js-popup" data-popup="js-studio-room">details</a>
 						</div>
 					</div>
 					<div class="apartment__bl">
-						<div class="apartment__img">
-							<img class="js-zoom" src="img/one-bedroom.png" alt="" data-zoom-image="img/one-bedroom.jpg" />
+						<div class="apartment__img js-popup" data-popup="js-one-room">
+							<div class="apartment__zoom">
+								<div class="img">
+									<img src="img/one-bedroom.png" class="js-zoom" data-large-img-url="img/one-bedroom.jpg">
+								</div>
+							</div>
 						</div>
 						<div class="apartment__info">
 							<p class="apartment__ttl">One bedroom</p>
 							<p class="apartment__size">631-649 SQ FT</p>
-							<a href="#" class="apartment__more">details</a>
+							<a href="#" class="apartment__more js-popup" data-popup="js-one-room">details</a>
 						</div>
 					</div>
 					<div class="apartment__bl txt-right">
-						<div class="apartment__img">
-							<img class="js-zoom" src="img/two-bedroom.png" alt="" data-zoom-image="img/two-bedroom.jpg" />
+						<div class="apartment__img js-popup" data-popup="js-two-room">
+							<div class="apartment__zoom">
+								<div class="img">
+									<img src="img/two-bedroom.png" class="js-zoom" data-large-img-url="img/two-bedroom.jpg">
+								</div>
+							</div>
 						</div>
 						<div class="apartment__info">
 							<p class="apartment__ttl">Two bedroom</p>
 							<p class="apartment__size">962-1031 SQ FT</p>
-							<a href="#" class="apartment__more">details</a>
+							<a href="#" class="apartment__more js-popup" data-popup="js-two-room">details</a>
 						</div>
 					</div>
 					<div class="apartment__bl txt-right">
-						<div class="apartment__img">
-							<img class="js-zoom" src="img/three-bedroom.png" alt="" data-zoom-image="img/three-bedroom.jpg" />
+						<div class="apartment__img js-popup" data-popup="js-three-room">
+							<div class="apartment__zoom">
+								<div class="img">
+									<img src="img/three-bedroom.png" class="js-zoom" data-large-img-url="img/three-bedroom.jpg">
+								</div>
+							</div>
 						</div>
 						<div class="apartment__info">
 							<p class="apartment__ttl">Three bedroom</p>
 							<p class="apartment__size">2192 SQ FT</p>
-							<a href="#" class="apartment__more">details</a>
+							<a href="#" class="apartment__more js-popup" data-popup="js-three-room">details</a>
 						</div>
 					</div>
+					<div id="zoom-container"></div>
 				</div>
 			</div>
 		</div>
@@ -480,7 +506,7 @@
 <div class="popup is-light-bg js-popup-apartment">
 	<div class="popup__in">
 		<img class="popup__map" src="img/apartments.png" alt="">
-		<a href='#' class="close js-close"><i class="icon icon-close"></i></a>
+		<a href='#' class="close js-close"><i class="icon icon-close-dark"></i></a>
 	</div>
 </div>
 <!-- end js-popup-apartment -->
@@ -526,6 +552,76 @@
 	</div>
 </div>
 <!-- end popup js-book-popup -->
+<!-- begin popup js-studio-room  -->
+<div class="popup is-form js-studio-room">
+	<div class="popup__in">
+		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
+		<div class="room">
+			<div class="room__img">
+				<img src="img/studio.jpg" alt="">
+			</div>
+			<div class="room__bl">
+				<p class="room__ttl">STUDIO <span>471 <small>SQ FT</small></span></p>
+				<p>Efficient design and layout, private balcony, extented kitchen countertops with seating area, high quality finishes and parking for every apartment including studios</p>
+				<button class="send">Book my visit</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end popup js-studio-room -->
+<!-- begin popup js-one-room  -->
+<div class="popup is-form js-one-room">
+	<div class="popup__in">
+		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
+		<div class="room">
+			<div class="room__img">
+				<img src="img/one-bedroom.jpg" alt="">
+			</div>
+			<div class="room__bl">
+				<p class="room__ttl">ONE BEDROOM <span>631-649 <small>SQ FT</small></span></p>
+				<p>Efficient design and layout, private balcony, extented kitchen countertops with seating area, high quality finishes and parking for every apartment including studios</p>
+				<button class="send">Book my visit</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end popup js-onstudioeroom -->
+<!-- begin popup js-two-room  -->
+<div class="popup is-form js-two-room">
+	<div class="popup__in">
+		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
+		<div class="room">
+			<div class="room__img">
+				<img src="img/two-bedroom.jpg" alt="">
+			</div>
+			<div class="room__bl">
+				<p class="room__ttl">TWO BEDROOM <span>962-1031 <small>SQ FT</small></span></p>
+				<p class="room__subttl">Superior Layout with Ensuite Master Bath</p>
+				<p>Each two bedroom apartment has two full bathrooms, with ample closet space and a kitchen countertop that extends as a breakfast bar with seating for three</p>
+				<button class="send">Book my visit</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end popup js-two-room -->
+<!-- begin popup js-three-room  -->
+<div class="popup is-form js-three-room">
+	<div class="popup__in">
+		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
+		<div class="room">
+			<div class="room__img">
+				<img src="img/three-bedroom.jpg" alt="">
+			</div>
+			<div class="room__bl">
+				<p class="room__ttl">THREE BEDROOM <span>2192 <small>SQ FT</small></span></p>
+				<p class="room__subttl">Private Garden and Maids Room</p>
+				<p>Each 3 bedroom apartment is located on the ground floor and has a 70 SqM private garden and two separate entrances.  Also, each apartment has a maid's room and bath with access from the outside.</p>
+				<button class="send">Book my visit</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end popup js-three-room -->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

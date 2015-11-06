@@ -8,7 +8,7 @@
 	padding: 10px 0
 	margin: 0 auto
 	background: rgba(0, 0, 0, 0.75)
-	z-index: 2
+	z-index: 2000
 	+clr
 	&__in
 		display: table
@@ -26,15 +26,25 @@
 		text-align: right
 		vertical-align: middle
 		white-space: nowrap
+		+clr
 	&__logo
 		display: table-cell
 		width: 50%
 		vertical-align: middle
 	+r(700)
+		padding: 2px 0
 		&__bl,
 		&__logo
 			width: auto
+		&__logo
+			display: block
+			float: left
+			max-width: 60px
+			img
+				width: 100%
 		.tel
+			display: none
+		.language
 			display: none
 
 .language
@@ -53,31 +63,61 @@
 			text-decoration: none
 
 .nav
-	position: absolute
-	top: 100%
+	position: fixed
+	max-width: 1600px
+	margin: 0 auto
+	top: 95px
 	left: 0
 	right: 0
 	padding: 17px 0
-	background: #FFF
+	background: #f4f5f6
 	opacity: 0
 	visibility: hidden
+	z-index: 1999
+	+tr(0.4s)
 	&.is-active
 		opacity: 1
 		visibility: visible
+	&__in
+		position: relative
+		+clr
 	&__list
+		width: 80%
+		float: left
 		+clr
 		li
 			float: left
-			padding: 0 15px
-			&:first-child
-				padding-left: 0
+			padding-right: 30px
 		a
 			color: #424142
 			font-size: 18px
-
-.menu
-	display: inline-block
-	vertical-align: middle
+	&__link
+		float: right
+		text-transform: uppercase
+		font-size: 18px
+		color: #b20000
+	.language
+		display: none
+	+r(700)
+		top: 68px
+		bottom: 0
+		overflow: auto
+		&__in
+			text-align: center
+			padding-top: 20px
+		&__list
+			float: none
+			width: 100%
+			text-align: center
+			li
+				float: none
+				padding: 0 0 20px 0
+		&__link
+			float: none
+			display: inline-block
+		.language
+			display: block
+			margin: 10px 0
 
 .btn-menu
 	display: inline-block
@@ -113,6 +153,43 @@
 			height: 4px
 			background: #fff
 			+tr(0.4s)
+	+r(700)
+		display: block
+		float: right
+		width: 30px
+		height: 30px
+		border: none
+		&.is-active
+			background: none
+			span
+				border-color: #FFF
+				&:before
+					background: #FFF
+
+.dots
+	position: absolute
+	top: 50%
+	right: 17%
+	width: 3px
+	height: 3px
+	margin-top: -1.5px
+	background: #424142
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		width: 3px
+		height: 3px
+		background: #424142
+	&:before
+		right: 100%
+		margin-right: 10px
+	&:after
+		left: 100%
+		margin-left: 10px
+	+r(1100)
+		display: none
 
 .tel
 	color: #0b2a4a
@@ -138,6 +215,7 @@
 
 // section
 .section
+	position: relative
 	min-height: 652px
 	+cover
 	&.is-home
@@ -241,8 +319,16 @@
 
 // book button
 .bookwrap
+	position: absolute
+	left: 0
+	right: 0
 	padding: 30px 0 50px
 	text-align: center
+	z-index: 3
+	&.is-fixed
+		position: fixed
+	+r(900)
+		position: relative
 
 .book
 	position: relative
@@ -336,7 +422,6 @@
 		color: #FFF
 		vertical-align: top
 		overflow: hidden
-		cursor: pointer
 		+cover
 		&:hover
 			.district__info
@@ -494,6 +579,7 @@
 // apartment block
 .apartment
 	&__in
+		position: relative
 		display: table
 		width: 100%
 		text-align: center
@@ -506,23 +592,28 @@
 		&.txt-right
 			text-align: right
 	&__img
+		position: relative
 		height: 300px
 		margin-bottom: 40px
 		+vertical
-		img
-			display: inline-block
-			max-width: 100%
-			vertical-align: bottom
+	&__zoom
+		display: inline-block
+		vertical-align: bottom
 	&__ttl
 		text-transform: uppercase
 		font-size: 30px
 		color: #211b1d
+		white-space: nowrap
 	&__more
 		text-decoration: underline
 		color: #b20000
 	&__info
 		display: inline-block
 		text-align: left
+	.img
+		position: relative
+		img
+			max-width: 100%
 	+r(1100)
 		&__in
 			display: block
@@ -535,6 +626,10 @@
 				text-align: center
 		&__img
 			height: auto
+	+r(900)
+		.img img
+			&.opaque
+				opacity: 1
 	+r(700)
 		&__bl
 			width: 100%
@@ -662,6 +757,7 @@
 			display: block
 			width: 100%
 	+r(700)
+		padding-bottom: 40px
 		&__txt p
 			width: 100%
 			float: none
@@ -711,6 +807,9 @@
 			float: none
 			width: 100%
 			margin: 0 auto
+	+r(700)
+		&__in
+			padding-top: 40px
 
 .form
 	+clr
@@ -726,6 +825,7 @@
 			display: block
 			margin: 8px auto 0
 
+//google map
 .google-map
 	position: relative
 	margin: 35px 0 30px
@@ -738,3 +838,23 @@
 		bottom: 0
 		width: 100%
 		height: 100%
+
+
+// magnifier
+.magnifier-preview
+	position: absolute
+	left: 50%
+	bottom: 100%
+	width: 300px
+	height: 300px
+	margin-left: -150px
+	+r(1100)
+		bottom: initial
+		top: 50%
+		margin-top: -150px
+	+r(900)
+		display: none
+
+.magnifier-lens
+	+r(900)
+		display: none
