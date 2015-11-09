@@ -41,7 +41,13 @@ head.ready(function() {
 		thumb: '.js-zoom',
 		largeWrapper: 'preview',
 		zoom: 2,
-		zoomable: true
+		zoomable: true,
+		onthumbenter: function() {
+			$(document.getElementById('preview')).addClass('is-active');
+		},
+		onthumbleave: function() {
+			$(document.getElementById('preview')).removeClass('is-active');
+		}
 	});
 
 	// show tel number

@@ -43,7 +43,17 @@
 			img
 				width: 100%
 		.tel
-			display: none
+			position: absolute
+			top: 23px
+			left: 0
+			right: 0
+			padding-left: 30px
+			text-align: center
+		.tel__num
+			max-width: 125px
+			font-size: 19px
+		.tel__link
+			font-size: 17px
 		.language
 			display: none
 
@@ -128,6 +138,7 @@
 	border: 1px solid #f4f5f6
 	border-radius: 9px
 	vertical-align: middle
+	-webkit-tap-highlight-color: transparent
 	+vertical
 	+tr(0.4s)
 	&.is-active
@@ -195,12 +206,13 @@
 
 .tel
 	color: #0b2a4a
-	font-size: 30px
+	font-size: 0
 	line-height: 1.2
 	+eur-b
 	&__num
 		display: inline-block
 		max-width: 190px
+		font-size: 30px
 		overflow: hidden
 		-ms-text-overflow: ellipsis
 		text-overflow: ellipsis
@@ -223,6 +235,8 @@
 	&.is-home
 		background-image: url(../img/home-bg.jpg)
 		background-color: #4B4E83
+		.bl__ttl
+			margin-bottom: 30px
 	&.is-payment
 		background-image: url(../img/payment-bg.jpg)
 		.bookwrap
@@ -266,18 +280,18 @@
 	&__about
 		overflow: hidden
 	&__ttl
-		max-width: 260px
+		max-width: 250px
 		margin-bottom: 15px
 		text-transform: uppercase
 		font-size: 30px
 		color: #f4f5f6
-		line-height: 1.6
+		line-height: 1.35
 		&.txt-yellow
 			color: #8b763c
 		&.txt-blue
 			color: #b9e0f5
 		&.txt-black
-			color: #565656
+			color: #211b1d
 		&.no-max-w
 			max-width: initial
 	&__small
@@ -300,7 +314,7 @@
 			text-align: left
 
 .list
-	max-width: 320px
+	max-width: 330px
 	&.is-small
 		font-family: Calibri, Myriad Pro, sans-serif
 		font-size: 14px
@@ -339,6 +353,7 @@
 	height: 148px
 	background-color: rgba(0, 0, 0, 0.6)
 	border-radius: 50%
+	-webkit-tap-highlight-color: transparent
 	+vertical
 	+tr(0.3s)
 	&:after
@@ -408,6 +423,9 @@
 			width: 100%
 			img
 				width: 100%
+	+r(900)
+		.bl__ttl
+			max-width: initial
 
 
 // districts
@@ -782,23 +800,24 @@
 	&__address
 		float: left
 		width: 31%
+	&__ttl
+		margin-bottom: 25px
+		text-transform: uppercase
+		font-size: 30px
+		color: #174f89
+		line-height: 1.4
+		+eur
+	&__txt
 		font-family: Calibri, Myriad Pro, sans-serif
 		font-size: 18px
 		color: #0b2a4a
-		line-height: 1.2
-		h3
-			color: #174f89
+		line-height: 1
 	&__form
 		float: right
 		width: 69%
 		max-width: 663px
 		h3
 			color: #b20000
-	h3
-		margin-bottom: 25px
-		text-transform: uppercase
-		font-size: 30px
-		line-height: 1.2
 	+r(1100)
 		&__address
 			float: none
@@ -818,6 +837,12 @@
 	&__label
 		display: block
 		margin-bottom: 8px
+	h3
+		margin-bottom: 25px
+		text-transform: uppercase
+		font-size: 30px
+		color: #b20000
+		+eur
 	.send
 		float: right
 		margin-top: 8px
@@ -830,7 +855,7 @@
 //google map
 .google-map
 	position: relative
-	margin: 35px 0 30px
+	margin: 42px 0 25px
 	height: 140px
 	iframe
 		position: absolute
@@ -850,6 +875,11 @@
 	width: 300px
 	height: 300px
 	margin-left: -150px
+	visibility: hidden
+	opacity: 0
+	&.is-active
+		visibility: visible
+		opacity: 1
 	+r(1100)
 		bottom: initial
 		top: 50%
@@ -858,5 +888,6 @@
 		display: none
 
 .magnifier-lens
+	cursor: pointer
 	+r(900)
 		display: none
