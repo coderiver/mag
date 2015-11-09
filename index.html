@@ -17,7 +17,7 @@
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- begin header  -->
-	<div class="header">
+	<div class="header js-header">
 		<div class="l">
 			<div class="header__in">
 				<a href="#" class="header__logo"><img src="img/mag.png" alt=""></a>
@@ -40,14 +40,14 @@
 		<div class="l">
 			<div class="nav__in">
 				<ul class="nav__list">
-					<li><a href="#">Main</a></li>
-					<li><a href="#">Location</a></li>
-					<li><a href="#">Advantages</a></li>
-					<li><a href="#">Gallery</a></li>
-					<li><a href="#">Apartment</a></li>
-					<li><a href="#">For investors</a></li>
-					<li><a href="#">Developer</a></li>
-					<li><a href="#">Contacts</a></li>
+					<li><a class="js-link is-active" href="#home">Main</a></li>
+					<li><a class="js-link" href="#location">Location</a></li>
+					<li><a class="js-link" href="#district">Advantages</a></li>
+					<li><a class="js-link" href="#gallery">Gallery</a></li>
+					<li><a class="js-link" href="#apartment">Apartment</a></li>
+					<li><a class="js-link" href="#invest">For investors</a></li>
+					<li><a class="js-link" href="#developer">Developer</a></li>
+					<li><a class="js-link" href="#contacts">Contacts</a></li>
 				</ul>
 				<a href="#" class="nav__link js-popup" data-popup="js-book-popup">Book my visit</a>
 				<ul class="language">
@@ -61,7 +61,7 @@
 	</div>
 	<!-- end header -->
 	<!-- begin section home -->
-	<div class="section is-home">
+	<div id="home" class="section is-home">
 		<div class="l">
 			<div class="bl txt-yellow">
 				<div class="bl__in">
@@ -138,7 +138,7 @@
 	</div>
 	<!-- end section handover -->
 	<!-- begin map  -->
-	<div class="map">
+	<div id="location" class="map">
 		<div class="map__in">
 			<div class="map__img js-popup" data-popup="js-popup-map">
 				<img src="img/map.jpg" alt="">
@@ -164,7 +164,7 @@
 	</div>
 	<!-- end map -->
 	<!-- begin section  -->
-	<div class="section">
+	<div id="district" class="section">
 		<div class="district">
 			<div class="district__bl is-aero">
 				<div class="district__info">
@@ -248,12 +248,12 @@
 	</div>
 	<!-- end section -->
 	<!-- begin gallery  -->
-	<div class="gallery">
+	<div id="gallery" class="gallery">
 		<a href="#" class="btn-gallery js-popup" data-popup="js-popup-slider"><span>gallery</span></a>
 	</div>
 	<!-- end gallery -->
 	<!-- begin map  -->
-	<div class="map is-apartment">
+	<div id="apartment" class="map is-apartment ">
 		<div class="map__in">
 			<div class="map__img js-popup" data-popup="js-popup-apartment">
 				<img src="img/apartments.png" alt="">
@@ -342,7 +342,7 @@
 	</div>
 	<!-- end map -->
 	<!-- begin invest  -->
-	<div class="invest">
+	<div id="invest" class="invest">
 		<div class="l">
 			<div class="invest__in">
 				<div class="invest__bl">
@@ -415,7 +415,7 @@
 	</div>
 	<!-- end invest -->
 	<!-- begin about  -->
-	<div class="about">
+	<div id="developer" class="about">
 		<div class="l">
 			<div class="about__in">
 				<div class="about__logo">
@@ -450,7 +450,7 @@
 	</div>
 	<!-- end about -->
 	<!-- begin contact  -->
-	<div class="contact">
+	<div id="contacts" class="contact">
 		<div class="l">
 			<div class="contact__in">
 				<div class="contact__address">
@@ -470,21 +470,21 @@
 					</div>
 				</div>
 				<div class="contact__form">
-					<form class="form">
+					<form id="form-footer" class="form">
 						<h3>Do you have questions?</h3>
 						<label class="form__label">
-							<input type="text" placeholder="Your First Name">
+							<input type="text" name="name" placeholder="Your First Name" data-validation="required">
 						</label>
 						<label class="form__label">
-							<input type="text" placeholder="Your Last Name">
+							<input type="text" name="surname" placeholder="Your Last Name">
 						</label>
 						<label class="form__label">
-							<input type="text" placeholder="Your Phone Number">
+							<input type="text" name="tel" placeholder="Your Phone Number" data-validation="required">
 						</label>
 						<label class="form__label">
-							<input type="text" placeholder="Your E-mail">
+							<input type="text" name="email" placeholder="Your E-mail" data-validation="required">
 						</label>
-						<textarea class="textarea" placeholder="Your Text"></textarea>
+						<textarea name="comment" class="textarea" placeholder="Your Text"></textarea>
 						<button type="send" class="send">Send</button>
 					</form>
 				</div>
@@ -532,26 +532,34 @@
 <div class="popup is-form js-book-popup">
 	<div class="popup__in">
 		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
-		<form class="form">
+		<form id="popup-form" class="form">
 			<h3>BOOK MY VISIT</h3>
 			<label class="form__label">
-				<input type="text" placeholder="Your First Name">
+				<input type="text" name="name" placeholder="Your First Name" data-validation="required">
 			</label>
 			<label class="form__label">
-				<input type="text" placeholder="Your Last Name">
+				<input type="text" name="surname" placeholder="Your Last Name">
 			</label>
 			<label class="form__label">
-				<input type="text" placeholder="Your Phone Number">
+				<input type="text" name="tel" placeholder="Your Phone Number" data-validation="required">
 			</label>
 			<label class="form__label">
-				<input type="text" placeholder="Your E-mail">
+				<input type="text" name="email" placeholder="Your E-mail" data-validation="required">
 			</label>
-			<textarea class="textarea" placeholder="Your Text"></textarea>
+			<textarea name="comment" class="textarea" placeholder="Your Text"></textarea>
 			<button type="send" class="send">Send</button>
 		</form>
 	</div>
 </div>
 <!-- end popup js-book-popup -->
+<!-- begin popup js-thanks-popup  -->
+<div class="popup is-form js-thanks-popup">
+	<div class="popup__in">
+		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
+		<p class="thanks">Thank you for contacing us, we will contact you soon!</p>
+	</div>
+</div>
+<!-- end popup js-thanks-popup -->
 <!-- begin popup js-studio-room  -->
 <div class="popup is-form js-studio-room">
 	<div class="popup__in">
@@ -563,7 +571,7 @@
 			<div class="room__bl">
 				<p class="room__ttl">STUDIO <span>471 <small>SQ FT</small></span></p>
 				<p>Efficient design and layout, private balcony, extented kitchen countertops with seating area, high quality finishes and parking for every apartment including studios</p>
-				<button class="send">Book my visit</button>
+				<button class="send" data-popup="js-book-popup">Book my visit</button>
 			</div>
 		</div>
 	</div>
@@ -580,7 +588,7 @@
 			<div class="room__bl">
 				<p class="room__ttl">ONE BEDROOM <span>631-649 <small>SQ FT</small></span></p>
 				<p>Efficient design and layout, private balcony, extented kitchen countertops with seating area, high quality finishes and parking for every apartment including studios</p>
-				<button class="send">Book my visit</button>
+				<button class="send" data-popup="js-book-popup">Book my visit</button>
 			</div>
 		</div>
 	</div>
@@ -598,7 +606,7 @@
 				<p class="room__ttl">TWO BEDROOM <span>962-1031 <small>SQ FT</small></span></p>
 				<p class="room__subttl">Superior Layout with Ensuite Master Bath</p>
 				<p>Each two bedroom apartment has two full bathrooms, with ample closet space and a kitchen countertop that extends as a breakfast bar with seating for three</p>
-				<button class="send">Book my visit</button>
+				<button class="send" data-popup="js-book-popup">Book my visit</button>
 			</div>
 		</div>
 	</div>
@@ -616,7 +624,7 @@
 				<p class="room__ttl">THREE BEDROOM <span>2192 <small>SQ FT</small></span></p>
 				<p class="room__subttl">Private Garden and Maids Room</p>
 				<p>Each 3 bedroom apartment is located on the ground floor and has a 70 SqM private garden and two separate entrances.  Also, each apartment has a maid's room and bath with access from the outside.</p>
-				<button class="send">Book my visit</button>
+				<button class="send" data-popup="js-book-popup">Book my visit</button>
 			</div>
 		</div>
 	</div>
