@@ -103,19 +103,17 @@ head.ready(function() {
 
 	// form validation
 	(function () {
-		var popup  = $('.popup'),
-			thanks = $('.js-thanks-popup');
+		var popup  = $('.js-book-popup'),
+			thanks = $('.js-thanks-popup'),
+			body   = $('body');
 		// welcome
 		$.validate({
 			form: '#popup-form',
-			errorMessage: false,
 			onSuccess: function() {
 				post_data = {
 					'name': $('#popup-form input[name=name]').val(),
-					'surname': $('#popup-form input[name=surname]').val(),
 					'tel': $('#popup-form input[name=tel]').val(),
-					'email': $('#popup-form input[name=email]').val(),
-					'comment': $('#popup-form input[name=comment]').val()
+					'email': $('#popup-form input[name=email]').val()
 				};
 				// Ajax post data to server
 				$.post('send.php', post_data, function(response) {
@@ -129,32 +127,31 @@ head.ready(function() {
 						$('#popup-form').get(0).reset();
 						setTimeout(function() {
 							thanks.fadeOut('fast');
+							body.removeClass('is-overflow');
 						}, 2000);
 					}
 				}, 'json');
+				return false;
 			}
 		});
 		// footer
 		$.validate({
 			form : '#form-footer',
-			errorMessage: false,
 			onSuccess: function() {
 				post_data = {
-					'name': $('#form-footerinput[name=name]').val(),
-					'surname': $('#form-footer input[name=surname]').val(),
+					'name': $('#form-footer input[name=name]').val(),
 					'tel': $('#form-footer input[name=tel]').val(),
-					'email': $('#form-footer input[name=email]').val(),
-					'comment': $('#form-footer input[name=comment]').val()
+					'email': $('#form-footer input[name=email]').val()
 				};
 				//Ajax post data to server
 				$.post('send.php', post_data, function(response) {
 					if (response.type == 'error') {}
 					else {
-						popup.fadeOut();
 						thanks.fadeIn('fast');
 						$('#form-footer').get(0).reset();
 						setTimeout(function() {
 							thanks.fadeOut('fast');
+							body.removeClass('is-overflow');
 						}, 2000);
 					}
 				}, 'json');
