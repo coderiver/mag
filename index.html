@@ -166,7 +166,7 @@
 	<!-- begin section  -->
 	<div id="district" class="section">
 		<div class="district">
-			<div class="district__bl is-aero">
+			<a href="#" class="district__bl is-aero">
 				<div class="district__info">
 					<p class="district__ttl">Al Maktoum Int’l Airport</p>
 					<ul class="list is-small">
@@ -175,8 +175,8 @@
 						<li class="list__option"><span>Passenger operations commenced in October 2013</span></li>
 					</ul>
 				</div>
-			</div>
-			<div class="district__bl is-golf">
+			</a>
+			<a href="#" class="district__bl is-golf">
 				<div class="district__info">
 					<p class="district__ttl">GOLF DISTRICT</p>
 					<ul class="list is-small">
@@ -185,8 +185,8 @@
 						<li class="list__option"><span>Extensive practice facilities, driving ranges, putting greens, pro shops and a luxury clubhouse</span></li>
 					</ul>
 				</div>
-			</div>
-			<div class="district__bl is-resident">
+			</a>
+			<a href='#' class="district__bl is-resident">
 				<div class="district__info">
 					<p class="district__ttl">RESIDENTIAL DISTRICT</p>
 					<ul class="list is-small">
@@ -194,8 +194,8 @@
 						<li class="list__option"><span>A community of up to 250,000 people, with access to amenities such as schools, community centers, medical facilities and retain outlets</span></li>
 					</ul>
 				</div>
-			</div>
-			<div class="district__bl is-logistic">
+			</a>
+			<a href='#' class="district__bl is-logistic">
 				<div class="district__info">
 					<p class="district__ttl">LOGISTICS DISTRICT</p>
 					<ul class="list is-small">
@@ -205,8 +205,8 @@
 						<li class="list__option"><span>Home to multinationals such as Aramex, Panalpina, DHL and Kuehne + Nagel</span></li>
 					</ul>
 				</div>
-			</div>
-			<div class="district__bl is-business">
+			</a>
+			<a href='#' class="district__bl is-business">
 				<div class="district__info">
 					<p class="district__ttl">BUSINESS PARK</p>
 					<ul class="list is-small">
@@ -214,8 +214,8 @@
 						<li class="list__option"><span>Business Park Free Zone compromises eleven ready-to-use commercial buildings which offer multiple office solutions to a wide range of businesses</span></li>
 					</ul>
 				</div>
-			</div>
-			<div class="district__bl is-commercial">
+			</a>
+			<a href='#' class="district__bl is-commercial">
 				<div class="district__info">
 					<p class="district__ttl">COMMERCIAL DISTRICT</p>
 					<ul class="list is-small">
@@ -224,8 +224,8 @@
 						<li class="list__option"><span>Subdivided into numerous zones, each with its own distinctive features</span></li>
 					</ul>
 				</div>
-			</div>
-			<div class="district__bl is-human">
+			</a>
+			<a href='#' class="district__bl is-human">
 				<div class="district__info">
 					<p class="district__ttl">HUMANITARIAN DISTRICT</p>
 					<ul class="list is-small">
@@ -234,8 +234,8 @@
 						<li class="list__option"><span>Envisioned as a base for emergency response</span></li>
 					</ul>
 				</div>
-			</div>
-			<div class="district__bl is-exhibition">
+			</a>
+			<a href='#' class="district__bl is-exhibition">
 				<div class="district__info">
 					<p class="district__ttl">EXHIBITION DISTRICT</p>
 					<ul class="list is-small">
@@ -243,7 +243,7 @@
 						<li class="list__option"><span>Home to World Expo 2020</span></li>
 					</ul>
 				</div>
-			</div>
+			</a>
 		</div>
 	</div>
 	<!-- end section -->
@@ -475,18 +475,23 @@
 					<form id="form-footer" class="form">
 						<h3>Do you have questions?</h3>
 						<label class="form__label">
-							<input type="text" name="name" placeholder="Your First Name" data-validation="required">
+							<input type="text" name="name" data-validation="required">
+							<span class="form__placeholder">Your First Name<sup>*</sup></span>
 						</label>
 						<label class="form__label">
-							<input type="text" name="surname" placeholder="Your Last Name">
+							<input type="text" name="surname">
+							<span class="form__placeholder">Your Last Name</span>
 						</label>
 						<label class="form__label">
-							<input type="text" name="tel" placeholder="Your Phone Number">
+							<input type="text" name="tel">
+							<span class="form__placeholder">Your Phone Number</span>
 						</label>
 						<label class="form__label">
-							<input type="text" name="email" placeholder="Your E-mail" data-validation="required">
+							<input type="text" name="email" data-validation="required">
+							<span class="form__placeholder">Your E-mail<sup>*</sup></span>
 						</label>
 						<textarea name="comment" class="textarea" placeholder="Your Text"></textarea>
+						<p class="form__required"><sup>*</sup>Required fields</p>
 						<button type="send" class="send">Send</button>
 					</form>
 				</div>
@@ -497,18 +502,18 @@
 </div>
 <!-- END out-->
 <!-- begin js-popup-map  -->
-<div class="popup js-popup-map">
+<div class="popup is-map js-popup-map">
+	<a href='#' class="close js-close"><i class="icon icon-close"></i></a>
 	<div class="popup__in">
 		<img class="popup__map" src="img/map.jpg" alt="">
-		<a href='#' class="close js-close"><i class="icon icon-close"></i></a>
 	</div>
 </div>
 <!-- end js-popup-map -->
 <!-- begin js-popup-apartment  -->
-<div class="popup is-light-bg js-popup-apartment">
+<div class="popup is-map is-light-bg js-popup-apartment">
+	<a href='#' class="close js-close"><i class="icon icon-close-dark"></i></a>
 	<div class="popup__in">
 		<img class="popup__map" src="img/apartments.png" alt="">
-		<a href='#' class="close js-close"><i class="icon icon-close-dark"></i></a>
 	</div>
 </div>
 <!-- end js-popup-apartment -->
@@ -531,24 +536,29 @@
 </div>
 <!-- end js-popup-slider -->
 <!-- begin popup js-book-popup  -->
-<div class="popup is-form js-book-popup">
+<div class="popup is-book js-book-popup">
 	<div class="popup__in">
-		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
 		<form id="popup-form" class="form">
 			<h3>BOOK MY VISIT</h3>
+			<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
 			<label class="form__label">
-				<input type="text" name="name" placeholder="Your First Name" data-validation="required">
+				<input type="text" name="name" data-validation="required">
+				<span class="form__placeholder">Your First Name<sup>*</sup></span>
 			</label>
 			<label class="form__label">
-				<input type="text" name="surname" placeholder="Your Last Name">
+				<input type="text" name="surname">
+				<span class="form__placeholder">Your Last Name</span>
 			</label>
 			<label class="form__label">
-				<input type="text" name="tel" placeholder="Your Phone Number">
+				<input type="text" name="tel">
+				<span class="form__placeholder">Your Phone Number</span>
 			</label>
 			<label class="form__label">
-				<input type="text" name="email" placeholder="Your E-mail" data-validation="required">
+				<input type="text" name="email" data-validation="required">
+				<span class="form__placeholder">Your E-mail<sup>*</sup></span>
 			</label>
 			<textarea name="comment" class="textarea" placeholder="Your Text"></textarea>
+			<p class="form__required"><sup>*</sup>Required fields</p>
 			<button type="send" class="send">Send</button>
 		</form>
 	</div>
@@ -565,8 +575,8 @@
 <!-- begin popup js-studio-room  -->
 <div class="popup is-form js-studio-room">
 	<div class="popup__in">
-		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
 		<div class="room">
+			<a href="#" class="close js-close"><i class="icon icon-close-red"></i></a>
 			<div class="room__img">
 				<img src="img/studio.jpg" alt="">
 			</div>
@@ -582,8 +592,8 @@
 <!-- begin popup js-one-room  -->
 <div class="popup is-form js-one-room">
 	<div class="popup__in">
-		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
 		<div class="room">
+			<a href="#" class="close js-close"><i class="icon icon-close-red"></i></a>
 			<div class="room__img">
 				<img src="img/one-bedroom.jpg" alt="">
 			</div>
@@ -599,8 +609,8 @@
 <!-- begin popup js-two-room  -->
 <div class="popup is-form js-two-room">
 	<div class="popup__in">
-		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
 		<div class="room">
+			<a href="#" class="close js-close"><i class="icon icon-close-red"></i></a>
 			<div class="room__img">
 				<img src="img/two-bedroom.jpg" alt="">
 			</div>
@@ -617,8 +627,8 @@
 <!-- begin popup js-three-room  -->
 <div class="popup is-form js-three-room">
 	<div class="popup__in">
-		<a href="#" class="close js-close"><i class="icon icon-close-dark"></i></a>
 		<div class="room">
+			<a href="#" class="close js-close"><i class="icon icon-close-red"></i></a>
 			<div class="room__img">
 				<img src="img/three-bedroom.jpg" alt="">
 			</div>

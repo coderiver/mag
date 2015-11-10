@@ -82,6 +82,7 @@ a
 // icons
 .icon
 	display: inline-block
+	vertical-align: middle
 	line-height: 1
 
 .icon-close
@@ -89,6 +90,9 @@ a
 
 .icon-close-dark
 	+s(close-dark)
+
+.icon-close-red
+	+s(close-red)
 
 // inputs and textarea
 input
@@ -103,9 +107,17 @@ input
 	+tr(0.4s)
 
 .textarea
-	@extend input
-	resize: none
+	display: block
+	width: 100%
 	height: 90px
+	padding: 9px 15px
+	font-size: 18px
+	font-family: Calibri, Myriad Pro, sans-serif
+	font-style: italic
+	background: #f5f5f5
+	border: 1px solid transparent
+	resize: none
+	+tr(0.4s)
 
 .help-block.form-error
 	display: none
@@ -124,4 +136,3 @@ input
 	+tr(0.4s)
 	&:hover
 		background: darken(#b20000, 5%)
-
