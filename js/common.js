@@ -120,6 +120,7 @@ head.ready(function() {
 			onSuccess: function() {
 				post_data = {
 					'name': $('#popup-form input[name=name]').val(),
+					'surname': $('#popup-form input[name=surname]').val(),
 					'tel': $('#popup-form input[name=tel]').val(),
 					'email': $('#popup-form input[name=email]').val()
 				};
@@ -148,6 +149,7 @@ head.ready(function() {
 			onSuccess: function() {
 				post_data = {
 					'name': $('#form-footer input[name=name]').val(),
+					'surname': $('#form-footer input[name=surname]').val(),
 					'tel': $('#form-footer input[name=tel]').val(),
 					'email': $('#form-footer input[name=email]').val()
 				};

@@ -1,16 +1,18 @@
 <?php
 if ($_POST) {
-        $to_email = "etna_scorpio91@mail.ru"; //Recipient email, Replace with own email here
+        $to_email = "shevchuk@prof.estate"; //Recipient email, Replace with own email here
 
         //Sanitize input data using PHP filter_var().
         $user_name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
+        $user_surname = filter_var($_POST["surname"], FILTER_SANITIZE_STRING);
+        $user_tel = filter_var($_POST["tel"], FILTER_SANITIZE_STRING);
         $user_email = filter_var($_POST["email"], FILTER_SANITIZE_STRING);
 
         // subject
         $subject = "Mag 5";
 
         //email body
-        $message_body = $user_name."\r\n".$user_email;
+        $message_body = $user_name."\r\n".$user_surname."\r\n".$user_tel."\r\n".$user_email;
 
         //proceed with PHP email.
         $headers = 'From: '.$user_name.'' . "\r\n" .

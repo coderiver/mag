@@ -337,8 +337,6 @@ input { display: block; width: 100%; padding: 9px 15px; font-size: 18px; font-fa
 .popup.is-book .popup__in { padding: 100px 20px; }
 .popup.is-book .close { position: absolute; top: 13px; right: 0; width: auto; height: auto; border: none; }
 .popup.is-map { padding: 100px 0; }
-.popup.is-map .popup__in { position: relative; z-index: 1; }
-.popup.is-map .close { z-index: -1; }
 .popup__in { display: inline-block; width: 100%; min-width: 290px; vertical-align: middle; white-space: normal; }
 .popup__map { max-width: 100%; }
 .popup .form { position: relative; }
